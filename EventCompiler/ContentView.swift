@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Just a testing var to make sure the login screen comes up
+    private let SHOW_LOGIN = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!!!!!!!")
+        if SHOW_LOGIN {
+            LoginView()
+        } else {
+            Text("Logged in")
         }
-        .padding()
     }
 }
 
